@@ -1,4 +1,6 @@
 ﻿using TeduBlog.Core.Domain.Content;
+using TeduBlog.Core.Models;
+using TeduBlog.Core.Models.Content;
 using TeduBlog.Core.SeedWorks;
 
 namespace TeduBlog.Core.Repositories;
@@ -34,4 +36,6 @@ public interface IPostRepository : IRepository<Post, Guid>
     //Task<PagedResult<PostInListDto>> GetPostByUserPaging(string keyword, Guid userId, int pageIndex = 1, int pageSize = 10);
 
     Task<List<Post>> GetPopularPostAsync(int count);
+
+    Task<PagedResult<PostInListDto>> GetPostPagingAsync(string keyword, Guid? categoryId, int pageIndex = 1, int pageSize = 10);
 }
