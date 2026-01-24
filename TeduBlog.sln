@@ -3,7 +3,37 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeduBlog.Api", "TeduBlog.Api\TeduBlog.Api.csproj", "{B13BDB77-F37D-4631-8622-45909FD14D1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeduBlog.Core", "TeduBlog.Core\TeduBlog.Core.csproj", "{0A8A0002-B9F7-4E72-BB7B-7449676772DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeduBlog.Data", "TeduBlog.Data\TeduBlog.Data.csproj", "{F5F8685F-47B2-4496-ADAE-918690D082D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeduWebApp", "TeduWebApp\TeduWebApp.csproj", "{CA237E0C-AACB-4A07-9AAB-A9432AE07A5D}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B13BDB77-F37D-4631-8622-45909FD14D1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B13BDB77-F37D-4631-8622-45909FD14D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B13BDB77-F37D-4631-8622-45909FD14D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B13BDB77-F37D-4631-8622-45909FD14D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A8A0002-B9F7-4E72-BB7B-7449676772DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A8A0002-B9F7-4E72-BB7B-7449676772DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A8A0002-B9F7-4E72-BB7B-7449676772DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A8A0002-B9F7-4E72-BB7B-7449676772DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5F8685F-47B2-4496-ADAE-918690D082D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5F8685F-47B2-4496-ADAE-918690D082D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5F8685F-47B2-4496-ADAE-918690D082D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5F8685F-47B2-4496-ADAE-918690D082D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA237E0C-AACB-4A07-9AAB-A9432AE07A5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA237E0C-AACB-4A07-9AAB-A9432AE07A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA237E0C-AACB-4A07-9AAB-A9432AE07A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA237E0C-AACB-4A07-9AAB-A9432AE07A5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
