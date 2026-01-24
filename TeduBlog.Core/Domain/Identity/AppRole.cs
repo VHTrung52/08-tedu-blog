@@ -2,13 +2,12 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TeduBlog.Core.Domain.Identity
+namespace TeduBlog.Core.Domain.Identity;
+
+[Table("AppRoles")]
+public class AppRole : IdentityRole<Guid>
 {
-    [Table("AppRoles")]
-    public class AppRole : IdentityRole<Guid>
-    {
-        [Required]
-        [MaxLength(200)]
-        public required string DisplayName { get; set; }
-    }
+    [Required]
+    [MaxLength(200)]
+    public required string DisplayName { get; set; }
 }
