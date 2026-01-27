@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using TeduBlog.Api;
 using TeduBlog.Api.Filters;
+using TeduBlog.Api.Services;
+using TeduBlog.Core.ConfigOptions;
 using TeduBlog.Core.Domain.Identity;
 using TeduBlog.Core.Models.Content;
 using TeduBlog.Core.SeedWorks;
@@ -64,6 +66,14 @@ foreach (var service in services)
 
 builder.Services.AddAutoMapper(typeof(PostInListDto));
 
+builder.Services.Configure<JwtTokenSettings>(configuration.GetSection("JwtTokenSettings"));
+
+builder.Services.AddScoped<SignInManager<AppUser>, SignInManager<AppUser>>();
+builder.Services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
+builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
+
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -79,7 +89,7 @@ builder.Services.AddSwaggerGen(c =>
         Title = "API for Administrators",
         Description = "API for CMS core domain. This domain keeps track of campaigns, campaign rules, and campaign execution."
     });
-    c.ParameterFilter<SwaggerNullableParameterFilter>
+    c.ParameterFilter<SwaggerNullableParameterFilter>();
 });
 
 var app = builder.Build();
