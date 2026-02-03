@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UserComponent } from './users/user.component';
+import {AuthGuard} from "../../shared/auth.guard";
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
     data: {
       title: 'Users',
     },
+    canActivate: [AuthGuard],
   },
 ];
 
