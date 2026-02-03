@@ -11,6 +11,7 @@ namespace TeduBlog.Api.Controllers.AdminApi;
 
 [Route("api/admin/[controller]")]
 [ApiController]
+[Authorize]
 public class PostController : ControllerBase
 {
     private readonly IUnitOfWork _unitOfWork;
